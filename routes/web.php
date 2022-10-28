@@ -17,4 +17,4 @@ Route::get('/', 'PrincipalController@principal');
 
 Route::get('/contato', 'ContatoController@contato');
 
-Route::get('/sobre-nos', 'SobreNosController@sobrenos');
+Route::get('/sobrenos', 'SobreNosController@sobrenos');
