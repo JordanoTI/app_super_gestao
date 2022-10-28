@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Ramsey\Uuid\Type\Integer;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,7 @@ Route::get('/', 'PrincipalController@principal');
 Route::get('/contato', 'ContatoController@contato');
 
 Route::get('/sobrenos', 'SobreNosController@sobrenos');
+
+Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function (string $nome, string $categoria, string $assunto, string $mensagem) {
+    echo "Retorno do Json: $nome - $categoria - $assunto - $mensagem";
+});
